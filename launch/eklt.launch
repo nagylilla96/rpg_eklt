@@ -9,8 +9,8 @@
   --v=$(arg v)
   --tracks_file_txt=$(arg tracks_file_txt)">
 
-    <remap from="events" to="/dvs/events"/>
-    <remap from="images" to="/dvs/image_raw"/>
+    <remap from="events" to="/cam0/events"/>
+    <remap from="images" to="/cam0/image_raw"/>
 
   </node>
 
