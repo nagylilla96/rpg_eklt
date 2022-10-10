@@ -119,7 +119,7 @@ void Viewer::drawOnImage(FeatureTrackData& data, cv::Mat& view, cv::Mat& image)
 
     // draw timestamp
     std::string time_string = "t = " + std::to_string(data.t.toSec() - data.t_init.toSec());
-    cv::putText(view, time_string, scale * (cv::Point(image.size[1], image.size[0]) - cv::Point(140,2)), cv::FONT_HERSHEY_COMPLEX_SMALL, scale*.7, cvScalar(0,255,255), 1, CV_AA);
+    cv::putText(view, time_string, scale * (cv::Point(image.size[1], image.size[0]) - cv::Point(140,2)), cv::FONT_HERSHEY_COMPLEX_SMALL, scale*.7, cvScalar(0,255,255), 1, cv::LINE_AA);
 
     // draw patches
     for (int i=0; i<data.patches.size(); i++)
